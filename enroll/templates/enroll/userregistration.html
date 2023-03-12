@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <title>User Registration</title>
+ <style>
+    .name{
+        background-color: rgb(131, 143, 197);
+        color: white;
+        font-size: 2rem;
+        border-radius: 5px;
+    }
+    .btn{
+        align-items: center;
+        margin-left: 250px;
+    }
+ </style>
+</head>
+<body style="background: conic-gradient(from 315deg, #6EA0DD, #3996B5);" >
+    <p>
+        <PRE style="font-size: 20px;">
+            IN THIS FORM I HAVE SET VALIDATION IN 
+            NAME-> USER HAVE TO INPUT THEIR NAME LESS THAT 5 CHAR TO IT WILL GENERATE ERROR
+            EMAIL-> THEIR IS ALSO HAVE EMAIL VALIDATION IF USER INPUT LESS THEN 10 CHAR OF MAILID SO IT WILL GENERATE ERROR
+            PHONE NUMBER-> THE PHONE NUMBER SHOULD BE 10 DIGITS 
+        </PRE>
+    </p>
+ <form style="border-radius: 20px; padding: 50px; background-color: rgb(179, 206, 222); margin-left: 650px; margin-right: 550px; margin-top: 120px; font-size: 2rem; " action="" method="POST" novalidate> 
+    <h1><center> FORM </center></h1>
+ {% csrf_token %}
+  {{form.as_p}}
+  <input class="btn btn-primary" type="submit" value="Submit">
+ </form>
+</body>
+</html>
